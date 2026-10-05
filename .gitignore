@@ -1,0 +1,35 @@
+# ============================================
+# FYP - Regulatory Filing Anomaly Detection
+# ============================================
+
+# Large research datasets
+aaer_mark5.csv
+firm_years.json
+firm_years_labels.json
+
+# Logs
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment/secrets
+.env
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Existing/reference implementation
+fraud-analysis/
