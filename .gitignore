@@ -31,5 +31,3 @@ env/
 .DS_Store
 Thumbs.db
 
-# Existing/reference implementation
-fraud-analysis/
