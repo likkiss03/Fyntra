@@ -1,0 +1,9 @@
+artifact,documents,percentage
+html_tags,0,0.0
+html_entities,0,0.0
+urls,0,0.0
+markdown_links,0,0.0
+markdown_headers,0,0.0
+possible_logs,13758,19.969808691613203
+mojibake,1,0.0014515052109037071
+replacement_character,0,0.0

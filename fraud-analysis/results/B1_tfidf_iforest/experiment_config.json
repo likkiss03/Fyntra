@@ -1,0 +1,15 @@
+{
+    "experiment": "B1",
+    "representation": "TF-IDF + TruncatedSVD",
+    "detector": "IsolationForest",
+    "train_end_year": 2017,
+    "test_start_year": 2018,
+    "test_end_year": 2023,
+    "max_features": 20000,
+    "svd_components": 300,
+    "contamination": 0.02,
+    "random_state": 42,
+    "training_samples": 38656,
+    "test_samples": 22011,
+    "labels_used_for_training": false
+}

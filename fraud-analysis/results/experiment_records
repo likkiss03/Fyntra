@@ -1,0 +1,42 @@
+Experiment: Existing LDA supervised baseline
+
+Dataset:
+10-K MD&A fraud dataset
+
+Train:
+5003
+
+Validation:
+1668
+
+Test:
+2408
+
+Test fraud:
+64
+
+Test normal:
+2344
+
+Random Forest:
+Accuracy: 0.97
+Fraud Precision: 0.00
+Fraud Recall: 0.00
+Fraud F1: 0.00
+ROC-AUC: 0.5963
+
+XGBoost:
+Accuracy: 0.93
+Fraud Precision: 0.09
+Fraud Recall: 0.17
+Fraud F1: 0.12
+ROC-AUC: 0.6049
+
+Observation:
+High overall accuracy is caused by severe class imbalance.
+RF completely fails to identify fraudulent filings.
+XGBoost identifies only 11/64 fraudulent filings.
+
+Next experiment:
+ModernBERT embeddings + Isolation Forest,
+with fraud labels hidden during training.

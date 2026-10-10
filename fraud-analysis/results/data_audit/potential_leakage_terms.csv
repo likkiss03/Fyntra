@@ -1,0 +1,8 @@
+term,total_documents,fraud_documents,nonfraud_documents
+fraud,4219,99,4120
+sec_enforcement,484,22,462
+aaer,3,0,3
+restatement,16443,616,15827
+investigation,6072,343,5729
+securities_exchange_commission,15572,502,15070
+accounting_irregularity,110,13,97

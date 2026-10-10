@@ -1,0 +1,13 @@
+check,value
+dataset_rows,68894
+dataset_columns,64
+missing_mda,0
+fraud_count,1596
+nonfraud_count,67298
+exact_duplicate_rows,112
+duplicate_text_rows,189
+conflicting_label_duplicate_rows,2
+short_documents,0
+very_long_documents,5197
+possible_language_issues,0
+train_test_duplicate_text_rows,0

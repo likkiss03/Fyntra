@@ -1,0 +1,2 @@
+experiment,n_samples,n_fraud,fraud_ratio,roc_auc,pr_auc,precision_at_50,recall_at_50,fraud_found_at_50,precision_at_100,recall_at_100,fraud_found_at_100,precision_at_200,recall_at_200,fraud_found_at_200
+B1 - TF-IDF + SVD + Isolation Forest (Temporal Test),22011,176,0.0079960019990005,0.4770843308283199,0.007243281691177666,0.0,0.0,0,0.0,0.0,0,0.0,0.0,0

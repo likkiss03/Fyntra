@@ -1,0 +1,56 @@
+PS D:\L6\fyp_phase_1\PoC\fraud-analysis> python D:\L6\fyp_phase_1\PoC\fraud-analysis\B1_tfidf_iforest\run.py
+======================================================================
+B1 - TF-IDF + Isolation Forest
+======================================================================
+
+Loading fraud_text.csv...
+Original dataset: 68894 rows x 57 columns
+Usable filings after cleaning: 68894
+
+TEMPORAL SPLIT
+----------------------------------------------------------------------
+Training period: 1994-2017
+Testing period: 2018-2023
+Training filings: 38656
+Testing filings: 22011
+Known fraud in training population: 1418
+Known fraud in test population: 176
+Test fraud ratio: 0.0080
+
+Fitting TF-IDF on TRAINING filings only...
+Train TF-IDF shape: (38656, 20000)
+Test TF-IDF shape: (22011, 20000)
+
+Fitting TruncatedSVD with 300 components...
+Train representation: (38656, 300)
+Test representation: (22011, 300)
+Explained variance: 0.3144
+
+Training Isolation Forest WITHOUT fraud labels...
+Isolation Forest fitted.
+
+Generating anomaly scores for future filings...
+
+Evaluating against hidden fraud labels...
+
+======================================================================
+B1 - TF-IDF + SVD + Isolation Forest (Temporal Test)
+======================================================================
+Samples:       22011
+Fraud cases:   176
+Fraud ratio:   0.0080
+ROC-AUC:       0.4771
+PR-AUC:        0.0072
+
+Top-K anomaly evaluation
+----------------------------------------------------------------------
+Top 50  | Fraud found: 0   | Precision@50: 0.0000 | Recall@50: 0.0000
+Top 100 | Fraud found: 0   | Precision@100: 0.0000 | Recall@100: 0.0000
+Top 200 | Fraud found: 0   | Precision@200: 0.0000 | Recall@200: 0.0000
+
+======================================================================
+B1 COMPLETE
+======================================================================
+
+Results saved in:
+D:\L6\fyp_phase_1\PoC\fraud-analysis\results\B1_tfidf_iforest

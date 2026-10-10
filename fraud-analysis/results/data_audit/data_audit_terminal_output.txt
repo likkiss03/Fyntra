@@ -1,0 +1,320 @@
+PS D:\L6\fyp_phase_1\PoC\fraud-analysis> python poc\data_audit.py
+
+
+================================================================================
+DATASET AUDIT
+================================================================================
+Loading:
+D:\L6\fyp_phase_1\PoC\fraud-analysis\fraud_text.csv
+
+Dataset loaded successfully.
+
+
+================================================================================
+1. DATASET SHAPE
+================================================================================
+Rows:    68,894
+Columns: 57
+
+Columns:
+  - cik
+  - name
+  - city
+  - state
+  - sic
+  - incorp_state
+  - filing_type
+  - fye
+  - filing_date
+  - reporting_date
+  - url
+  - mda
+  - late_filing
+  - transition_filing
+  - amend_filing
+  - dateTime
+  - respondents
+  - fraud_start
+  - fraud_end
+  - revoked
+  - certainty_start
+  - certainty_end
+  - 17a
+  - 17a2
+  - 17a3
+  - 17b
+  - 5a
+  - 5b1
+  - 5c
+  - 10b
+  - 13a
+  - 12b20
+  - 12b25
+  - 13a1
+  - 13a10
+  - 13a11
+  - 13a13
+  - 13a14
+  - 13a16
+  - 13b2A
+  - 13b2B
+  - 13a15
+  - 13b5
+  - 14a
+  - 14c
+  - 19a
+  - 30A
+  - 100a2
+  - 100b
+  - 105c7B
+  - corruption
+  - amis
+  - fsf
+  - fraudulent
+  - char_count
+  - word_count
+  - word_density
+
+
+================================================================================
+2. MISSING DATA
+================================================================================
+         column  null_nan  empty_string  whitespace_only  null_percent
+            sic       605             0                0      0.878161
+       dateTime     61970         61970                0     89.949778
+    respondents     61970         61970                0     89.949778
+    fraud_start     61970         61970                0     89.949778
+      fraud_end     61970         61970                0     89.949778
+        revoked     68700         68700                0     99.718408
+certainty_start     61970             0                0     89.949778
+  certainty_end     61970             0                0     89.949778
+            17a     61992             0                0     89.981711
+           17a2     61992             0                0     89.981711
+           17a3     61992             0                0     89.981711
+            17b     61992             0                0     89.981711
+             5a     61992             0                0     89.981711
+            5b1     61992             0                0     89.981711
+             5c     61992             0                0     89.981711
+            10b     61992             0                0     89.981711
+            13a     61992             0                0     89.981711
+          12b20     61992             0                0     89.981711
+          12b25     61992             0                0     89.981711
+           13a1     61992             0                0     89.981711
+          13a10     61992             0                0     89.981711
+          13a11     61992             0                0     89.981711
+          13a13     61992             0                0     89.981711
+          13a14     61992             0                0     89.981711
+          13a16     61992             0                0     89.981711
+          13b2A     61992             0                0     89.981711
+          13b2B     61992             0                0     89.981711
+          13a15     61992             0                0     89.981711
+           13b5     61992             0                0     89.981711
+            14a     61992             0                0     89.981711
+            14c     61992             0                0     89.981711
+            19a     61992             0                0     89.981711
+            30A     61992             0                0     89.981711
+          100a2     61992             0                0     89.981711
+           100b     61992             0                0     89.981711
+         105c7B     61992             0                0     89.981711
+     corruption     61970             0                0     89.949778
+           amis     61970             0                0     89.949778
+            fsf     61970             0                0     89.949778
+
+Critical fields:
+mda                         0 missing (0.00%)
+fraudulent                  0 missing (0.00%)
+cik                         0 missing (0.00%)
+name                        0 missing (0.00%)
+filing_date                 0 missing (0.00%)
+
+
+================================================================================
+3. CLASS DISTRIBUTION
+================================================================================
+fraudulent
+0    67298
+1     1596
+Name: count, dtype: int64
+
+Valid binary labels: 68,894
+
+Class 0 / Non-fraud: 67,298 (97.68%)
+Class 1 / Fraud:     1,596 (2.32%)
+
+Approximate imbalance ratio: 42.2:1
+WARNING: Strong class imbalance detected.
+Accuracy should NOT be used as the main evaluation metric.
+
+
+================================================================================
+4. EXACT ROW DUPLICATES
+================================================================================
+Rows involved in exact duplicates: 112
+Percentage: 0.16%
+
+
+================================================================================
+5. DUPLICATE MD&A TEXT
+================================================================================
+Normalising text for duplicate detection...
+Rows involved in duplicate MD&A text: 189
+Percentage of dataset: 0.27%
+
+
+================================================================================
+6. IDENTICAL TEXT WITH CONFLICTING LABELS
+================================================================================
+Unique duplicated texts with conflicting labels: 1
+Rows involved: 2
+WARNING: Identical text with different labels should be investigated.
+
+
+================================================================================
+7. TEXT LENGTH DISTRIBUTION
+================================================================================
+Calculating word counts...
+Minimum: 201
+Median:  8,606
+Mean:    9,987
+Maximum: 191,537
+
+Percentiles:
+0.01      801.00
+0.05     1841.00
+0.25     5133.25
+0.50     8606.50
+0.75    12958.00
+0.95    22633.00
+0.99    34993.35
+
+Documents under 200 words: 0
+Documents over 20,000 words: 5,197
+
+
+================================================================================
+8. NLP NOISE / ARTIFACTS
+================================================================================
+html_tags                        0 (0.00%)
+html_entities                    0 (0.00%)
+urls                             0 (0.00%)
+markdown_links                   0 (0.00%)
+markdown_headers                 0 (0.00%)
+possible_logs               13,758 (19.97%)
+mojibake                         1 (0.00%)
+replacement_character            0 (0.00%)
+
+
+================================================================================
+9. CHARACTER / ENCODING CHECK
+================================================================================
+Documents containing at least one non-ASCII character: 5555
+Documents with >1% non-ASCII characters: 0
+
+
+================================================================================
+10. BASIC VOCABULARY / CASING CHECK
+================================================================================
+Documents with >50% uppercase letters: 0
+
+
+================================================================================
+11. LANGUAGE CONSISTENCY HEURISTIC
+================================================================================
+This is a heuristic only; it is NOT a full language-detection model.
+Documents flagged for manual language review: 0
+
+
+================================================================================
+12. POTENTIAL TEXT / LABEL LEAKAGE
+================================================================================
+                          term  total_documents  fraud_documents  nonfraud_documents
+                         fraud             4219               99                4120
+               sec_enforcement              484               22                 462
+                          aaer                3                0                   3
+                   restatement            16443              616               15827
+                 investigation             6072              343                5729
+securities_exchange_commission            15572              502               15070
+       accounting_irregularity              110               13                  97
+
+
+================================================================================
+13. TEMPORAL LABEL DISTRIBUTION
+================================================================================
+              total  fraud  fraud_rate
+_filing_year                          
+1994            171      1    0.005848
+1995            201      5    0.024876
+1996            489     15    0.030675
+1997            778     31    0.039846
+1998            876     49    0.055936
+1999            982     66    0.067210
+2000           1079     83    0.076923
+2001           1155    105    0.090909
+2002           1242    116    0.093398
+2003           1300     97    0.074615
+2004           1382     85    0.061505
+2005           1466     73    0.049795
+2006           1548     61    0.039406
+2007           1627     55    0.033805
+2008           1791     51    0.028476
+2009           2136     58    0.027154
+2010           2196     69    0.031421
+2011           2297     68    0.029604
+2012           2381     60    0.025199
+2013           2461     57    0.023161
+2014           2604     49    0.018817
+2015           2720     56    0.020588
+2016           2833     53    0.018708
+2017           2941     55    0.018701
+2018           3094     53    0.017130
+2019           3216     45    0.013993
+2020           3394     33    0.009723
+2021           3785     21    0.005548
+2022           4198     16    0.003811
+2023           4324      8    0.001850
+2024           4430      2    0.000451
+2025           3797      0    0.000000
+
+
+================================================================================
+14. TRAIN / TEST DUPLICATE LEAKAGE CHECK
+================================================================================
+Test documents whose identical normalised text exists in training:
+0
+Percentage of temporal test set: 0.00%
+
+
+================================================================================
+15. COMPANY OVERLAP ACROSS TEMPORAL SPLIT
+================================================================================
+Unique training companies: 3,520
+Unique test companies: 4,551
+Companies present in both: 3,039
+
+NOTE: Company overlap is not automatically leakage.
+For temporal anomaly detection, seeing a company's historical filings may actually be intentional.
+
+
+================================================================================
+16. AUDIT SUMMARY
+================================================================================
+                           check  value
+                    dataset_rows  68894
+                 dataset_columns     64
+                     missing_mda      0
+                     fraud_count   1596
+                  nonfraud_count  67298
+            exact_duplicate_rows    112
+             duplicate_text_rows    189
+conflicting_label_duplicate_rows      2
+                 short_documents      0
+             very_long_documents   5197
+        possible_language_issues      0
+  train_test_duplicate_text_rows      0
+
+Audit complete.
+
+Reports saved to:
+D:\L6\fyp_phase_1\PoC\fraud-analysis\results\data_audit
+
+IMPORTANT: No original data was modified.

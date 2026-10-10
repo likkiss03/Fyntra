@@ -1,0 +1,102 @@
+PS D:\L6\fyp_phase_1\PoC> python D:\L6\fyp_phase_1\PoC\fraud-analysis\LDA\lda_classifier.py
+Training RF with LDA script started.
+D:\L6\fyp_phase_1\PoC\fraud-analysis\LDA\lda_classifier.py:66: DtypeWarning: Columns (15,16,17,18,19) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(data_path)
+Training set size: 5003
+Validation set size: 1668
+Test set size: 2408
+Universal fraudulent ratio: 0.02
+Training set fraudulent ratio: 0.04
+Validation set fraudulent ratio: 0.04
+Test set fraudulent ratio: 0.03
+Training set topic vectors shape: (5003, 100)
+Test set topic vectors shape: (2408, 100)
+Random Forest Classifier fitted.
+Evaluating Random Forest Classifier...
+Classification Report for Random Forest:
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99      2344
+           1       0.00      0.00      0.00        64
+
+    accuracy                           0.97      2408
+   macro avg       0.49      0.50      0.49      2408
+weighted avg       0.95      0.97      0.96      2408
+
+Confusion Matrix for Random Forest:
+[[2344    0]
+ [  64    0]]
+ROC AUC for Random Forest: 0.5963
+[0]     Train-logloss:0.65903   Train-f1_macro:0.40357  Valid-logloss:0.64989   Valid-f1_macro:0.43156
+[1]     Train-logloss:0.63062   Train-f1_macro:0.42795  Valid-logloss:0.61938   Valid-f1_macro:0.45223
+[2]     Train-logloss:0.60370   Train-f1_macro:0.44603  Valid-logloss:0.59647   Valid-f1_macro:0.45539
+[3]     Train-logloss:0.58215   Train-f1_macro:0.59695  Valid-logloss:0.57398   Valid-f1_macro:0.51704
+[4]     Train-logloss:0.55990   Train-f1_macro:0.58015  Valid-logloss:0.55436   Valid-f1_macro:0.52014
+[5]     Train-logloss:0.54018   Train-f1_macro:0.62506  Valid-logloss:0.53615   Valid-f1_macro:0.54107
+[6]     Train-logloss:0.52522   Train-f1_macro:0.62314  Valid-logloss:0.51601   Valid-f1_macro:0.54478
+[7]     Train-logloss:0.51127   Train-f1_macro:0.58348  Valid-logloss:0.49754   Valid-f1_macro:0.52482
+[8]     Train-logloss:0.49691   Train-f1_macro:0.62264  Valid-logloss:0.48559   Valid-f1_macro:0.54174
+[9]     Train-logloss:0.47595   Train-f1_macro:0.61662  Valid-logloss:0.46580   Valid-f1_macro:0.53931
+[10]    Train-logloss:0.46537   Train-f1_macro:0.62125  Valid-logloss:0.45072   Valid-f1_macro:0.54329
+[11]    Train-logloss:0.45741   Train-f1_macro:0.62751  Valid-logloss:0.43956   Valid-f1_macro:0.54924
+[12]    Train-logloss:0.44196   Train-f1_macro:0.64547  Valid-logloss:0.42864   Valid-f1_macro:0.55744
+[13]    Train-logloss:0.42962   Train-f1_macro:0.65097  Valid-logloss:0.41624   Valid-f1_macro:0.56516
+[14]    Train-logloss:0.41331   Train-f1_macro:0.67109  Valid-logloss:0.40201   Valid-f1_macro:0.57341
+[15]    Train-logloss:0.40509   Train-f1_macro:0.67628  Valid-logloss:0.39100   Valid-f1_macro:0.57515
+[16]    Train-logloss:0.39634   Train-f1_macro:0.67996  Valid-logloss:0.38273   Valid-f1_macro:0.57991
+[17]    Train-logloss:0.38757   Train-f1_macro:0.68850  Valid-logloss:0.37353   Valid-f1_macro:0.59354
+[18]    Train-logloss:0.37153   Train-f1_macro:0.69722  Valid-logloss:0.36254   Valid-f1_macro:0.58500
+[19]    Train-logloss:0.36367   Train-f1_macro:0.70381  Valid-logloss:0.35588   Valid-f1_macro:0.59029
+[20]    Train-logloss:0.35700   Train-f1_macro:0.70733  Valid-logloss:0.34780   Valid-f1_macro:0.59373
+[21]    Train-logloss:0.35317   Train-f1_macro:0.70766  Valid-logloss:0.34363   Valid-f1_macro:0.59043
+[22]    Train-logloss:0.34295   Train-f1_macro:0.71156  Valid-logloss:0.33360   Valid-f1_macro:0.59052
+[23]    Train-logloss:0.33789   Train-f1_macro:0.71458  Valid-logloss:0.32914   Valid-f1_macro:0.58913
+[24]    Train-logloss:0.33420   Train-f1_macro:0.71518  Valid-logloss:0.32375   Valid-f1_macro:0.59393
+[25]    Train-logloss:0.32842   Train-f1_macro:0.71654  Valid-logloss:0.31957   Valid-f1_macro:0.60476
+[26]    Train-logloss:0.32333   Train-f1_macro:0.71938  Valid-logloss:0.31404   Valid-f1_macro:0.60440
+[27]    Train-logloss:0.31966   Train-f1_macro:0.72456  Valid-logloss:0.31161   Valid-f1_macro:0.61196
+[28]    Train-logloss:0.30909   Train-f1_macro:0.73643  Valid-logloss:0.30456   Valid-f1_macro:0.61196
+[29]    Train-logloss:0.30666   Train-f1_macro:0.73231  Valid-logloss:0.30193   Valid-f1_macro:0.61196
+[30]    Train-logloss:0.29937   Train-f1_macro:0.73674  Valid-logloss:0.29728   Valid-f1_macro:0.61257
+[31]    Train-logloss:0.29509   Train-f1_macro:0.74220  Valid-logloss:0.29236   Valid-f1_macro:0.60722
+[32]    Train-logloss:0.29133   Train-f1_macro:0.74856  Valid-logloss:0.28771   Valid-f1_macro:0.61057
+[33]    Train-logloss:0.28572   Train-f1_macro:0.75306  Valid-logloss:0.27940   Valid-f1_macro:0.61580
+[34]    Train-logloss:0.28054   Train-f1_macro:0.76285  Valid-logloss:0.27403   Valid-f1_macro:0.61760
+[35]    Train-logloss:0.27803   Train-f1_macro:0.76068  Valid-logloss:0.27101   Valid-f1_macro:0.61371
+[36]    Train-logloss:0.27396   Train-f1_macro:0.76198  Valid-logloss:0.26884   Valid-f1_macro:0.61282
+[37]    Train-logloss:0.27136   Train-f1_macro:0.76817  Valid-logloss:0.26678   Valid-f1_macro:0.61371
+[38]    Train-logloss:0.26853   Train-f1_macro:0.76728  Valid-logloss:0.26457   Valid-f1_macro:0.61760
+[39]    Train-logloss:0.26428   Train-f1_macro:0.76683  Valid-logloss:0.25907   Valid-f1_macro:0.61282
+[40]    Train-logloss:0.26141   Train-f1_macro:0.77089  Valid-logloss:0.25636   Valid-f1_macro:0.61644
+[41]    Train-logloss:0.25918   Train-f1_macro:0.77181  Valid-logloss:0.25294   Valid-f1_macro:0.61644
+[42]    Train-logloss:0.25665   Train-f1_macro:0.77089  Valid-logloss:0.25131   Valid-f1_macro:0.61644
+[43]    Train-logloss:0.25397   Train-f1_macro:0.77089  Valid-logloss:0.24998   Valid-f1_macro:0.61242
+[44]    Train-logloss:0.25206   Train-f1_macro:0.77135  Valid-logloss:0.24816   Valid-f1_macro:0.61333
+xgb.train model fitted.
+Best iteration: 34
+Classification Report for XGBoost:
+              precision    recall  f1-score   support
+
+           0       0.98      0.95      0.96      2344
+           1       0.09      0.17      0.12        64
+
+    accuracy                           0.93      2408
+   macro avg       0.53      0.56      0.54      2408
+weighted avg       0.95      0.93      0.94      2408
+
+Confusion Matrix for XGBoost:
+[[2229  115]
+ [  53   11]]
+ROC AUC for XGBoost: 0.6049
+PS D:\L6\fyp_phase_1\PoC> python D:\L6\fyp_phase_1\PoC\fraud-analysis\Modern-BERT\MBERT_embeddings.py
+tokenizer_config.json: 20.8kB [00:00, 20.8MB/s]
+C:\Users\Lihini\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\huggingface_hub\file_download.py:142: UserWarning: `huggingface_hub` cache-systemuses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Lihini\.cache\huggingface\hub\models--answerdotai--ModernBERT-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+tokenizer.json: 2.13MB [00:00, 25.0MB/s]
+special_tokens_map.json: 100%|███████████████████████████████████████████████████████| 694/694 [00:00<?, ?B/s]
+config.json: 1.19kB [00:00, ?B/s]
+model.safetensors: 100%|████████████████████████████████████████████████████| 599M/599M [10:17<00:00, 969kB/s]
+PS D:\L6\fyp_phase_1\PoC> 
+
+
