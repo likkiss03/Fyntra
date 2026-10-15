@@ -1,0 +1,2 @@
+experiment,n_samples,n_fraud,fraud_ratio,roc_auc,pr_auc,precision_at_50,recall_at_50,fraud_found_at_50,precision_at_100,recall_at_100,fraud_found_at_100,precision_at_200,recall_at_200,fraud_found_at_200
+B2 - ModernBERT + Isolation Forest (Temporal Test),5501,43,0.00781676058898382,0.4684994077394395,0.006969618302707269,0.0,0.0,0,0.0,0.0,0,0.0,0.0,0

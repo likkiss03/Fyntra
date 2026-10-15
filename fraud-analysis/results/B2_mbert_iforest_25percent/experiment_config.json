@@ -1,0 +1,28 @@
+{
+    "experiment_id": "B2",
+    "experiment_name": "ModernBERT + Isolation Forest (Temporal Test)",
+    "dataset": "fraud_text.csv",
+    "text_column": "mda",
+    "label_column": "fraudulent",
+    "label_used_for_training": false,
+    "model_name": "answerdotai/ModernBERT-base",
+    "representation": "ModernBERT contextual hidden states + token mean pooling + chunk mean pooling",
+    "detector": "IsolationForest",
+    "train_period": "1994-2017",
+    "test_period": "2018-2023",
+    "excluded_recent_years": [
+        2024,
+        2025
+    ],
+    "chunk_size": 1024,
+    "max_chunks_per_document": 8,
+    "maximum_processed_tokens_approx": 8192,
+    "contamination": 0.02,
+    "n_estimators": 300,
+    "random_state": 42,
+    "training_samples": 9660,
+    "test_samples": 5501,
+    "test_fraud_cases": 43,
+    "embedding_dimensions": 768,
+    "device_used": "cuda"
+}
