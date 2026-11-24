@@ -1,51 +1,18 @@
+# Local raw SEC documents and generated outputs
+sec_item1a_data/
+__pycache__/
+*.pyc
+.env
+# Generated machine learning models
+*.joblib
+
+# Generated SEC datasets
+sec_item1a_data/
 
 # Python cache
 __pycache__/
-*.py[cod]
+*.pyc
 
 # Virtual environments
 .venv/
-venv/
-env/
-
-# IDE
-.idea/
-.vscode/
-
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-
-# Operating system
-.DS_Store
-Thumbs.db
-
-# Raw and processed datasets
-data/raw/
-data/processed/
-**/data/raw/
-**/data/processed/
-
-# Trained models and large artifacts
-*.pkl
-*.joblib
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.onnx
-
-# Experiment outputs that can be regenerated
-*.log
-*.tmp
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# Build and distribution
-build/
-dist/
-*.egg-info/
+.venv1/
